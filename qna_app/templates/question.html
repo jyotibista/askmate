@@ -1,0 +1,17 @@
+<html>
+<head> <title> Project </title>
+</head>
+<body>
+This is a new question
+{% for ques in q %}
+  <h1> {{ ques.title }} </h1>
+  <h2> {{  ques.question_desc }} </h2>
+  <h3> {{ ques.timestamp }} </h3>
+  <img src = "../../media/{{ques.question_img}}" 
+   style ="width : 100px; height:100px;"
+   alt ='image' >
+
+
+{% endfor %}
+</body>
+<html>

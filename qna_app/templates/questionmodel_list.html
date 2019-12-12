@@ -1,0 +1,22 @@
+<html>
+<head> <title> Project </title>
+</head>
+<body>
+{% for ques in q %}
+  <h1> {{ ques.title }} </h1>
+  <h2> {{  ques.question_desc }} </h2>
+  <h3> {{ ques.timestamp }} </h3>
+  <h3> {{ ques.question_vote }} </h3>
+  <img src = "../../media/{{ques.question_img}}" 
+   style ="width : 100px; height:100px;"
+   alt ='image' >
+
+   <a href = "{%url 'qna:update' ques.id %}"> <button> Update </button> </a>
+   <a href = "{%url 'qna:delete' ques.id %}"> <button> Delete </button> </a>
+    <a href = "{%url 'qna:upvote' ques.id %}"> <button> Upvote </button> </a>
+
+{% endfor %}
+<a href = "{% url 'qna:add' %}"> <button> ADD </button> </a>
+</div>
+</body>
+<html>
