@@ -1,0 +1,15 @@
+<html>
+<head> <title> </title>
+<body>
+{% for ans in a %}
+  <h1> {{ ans.question }} </h1>
+  <h2> {{ ans.answer_desc }} </h2>
+  <h3> {{ ans.timestamp }} </h3>
+  <h3> {{ ans.answered_by }} </h3>
+  <img src = "../../media/{{ans.answer_img}}" 
+   style ="width : 100px; height:100px;"
+   alt ='image' >
+   <h3> {{ ans.answer_votes }} </h3>
+{% endfor %}
+</body>
+</html>

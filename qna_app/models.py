@@ -27,7 +27,7 @@ class AnswesrModel(models.Model):
     timestamp = models.DateTimeField(auto_now_add= True)
     question = models.ForeignKey(QuestionModel,on_delete = models.CASCADE )
     answer_votes = models.IntegerField(default=0)
-    is_accept = models.BooleanField
+    is_accept = models.BooleanField(default=False)
     answer_desc = models.TextField()
     answer_img = models.ImageField(upload_to = 'AnswerImg',blank = True,null = True)
 

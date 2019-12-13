@@ -1,0 +1,13 @@
+<form method = "POST"  enctype="multipart/form-data" >
+{% csrf_token%} 
+{{ form.as_p}} 
+{{form.errors}}
+
+
+Description: <input type = 'text' name = 'answer_desc'> <br> <br>
+Answered by: <input type ='text' name ='answered_by'> <br> <br>
+Image: <input type ='file' name ='answer_img'> <br> <br>
+
+Votes:<input type = "text" name = "answer_vote" value=0>
+<input type ='submit' value = 'submit'/>
+</form>

@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block title%}
+ {{ q.title}}
+{% endblock %}
+
+{% block main_block %}
+<div class ="card">
+ <div class = "card-body">
+ <h5> {{ q.title }} </h5>
+ <h4> {{ q.question_desc }} </h4> <br>
+ Votes : {{ q.question_vote }} <br>
+ Posted by : {{ q.posted_user}} <br>
+ Time : {{ q.timestamp }} <br>
+</div>
+</div>
+<h2> Answer: </h2>
+{% for ans in a %}
+<div class ="card">
+ <div class = "card-body">
+ <h5> {{ ans.answer_desc }} </h5>
+ Answered by : {{ ans.answered_by }} <br>
+ Time : {{ ans.timestamp }} <br>
+ Votes : {{ ans.answer_votes }}
+ {% endfor %}
+</div>
+</div>
+{% endblock %}
